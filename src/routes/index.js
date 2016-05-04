@@ -5,15 +5,28 @@ var github = require('../common/github');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     
-    github.getReposForUser(req.user)
-    .then(function(data){
-        
-        res.render('index', { model: data });    
-        
-    }, function(err){
-        next(err);
-    });
+    var model = {
+        repos: [],
+        orgs: []
+    };
     
+    github.getReposForUser(req.user)
+    .then(function(repos){
+        model.repos = repos || [];
+        
+        return github.getOrgsForUser(req.user);  
+    })
+    .then(function(orgs){
+        
+        model.orgs = orgs || [];
+        
+    })
+    .then(function(){
+        res.render('index', { model: model});
+    })
+    .catch(function(err){
+       next(err); 
+    });
 });
 
 module.exports = router;
