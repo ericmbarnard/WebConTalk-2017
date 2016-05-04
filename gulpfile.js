@@ -11,13 +11,13 @@ var watch          = require("gulp-watch");
 
 var config = {
     js: {
-        src: ['client/**/*.js', '!client/plugins/**/*.js', '!client/**/*.min.js', '!client/**/*.tests.js'],
-        dest: "public/js"
+        src: ['src/client/**/*.js', '!src/client/plugins/**/*.js', '!src/client/**/*.min.js', '!src/client/**/*.tests.js'],
+        dest: "src/public/js"
     },
 
     jsplugins: {
-        src: ['client/plugins/**/*.js', '!client/plugins/**/*.min.js', '!client/plugins/**/*.tests.js'],
-        dest: "public/js"
+        src: ['src/client/plugins/**/*.js', '!src/client/plugins/**/*.min.js', '!src/client/plugins/**/*.tests.js'],
+        dest: "src/public/js"
     }
 };
 
@@ -26,10 +26,10 @@ var config = {
 // Synchronously delete the output file(s)
 gulp.task('clean', function () {
     del.sync([
-        'public/js/client.js',
-        'public/js/client.min.js',
-        'public/js/plugins.js',
-        'public/js/plugins.min.js'
+        'src/public/js/client.js',
+        'src/public/js/client.min.js',
+        'src/public/js/plugins.js',
+        'src/public/js/plugins.min.js'
     ]);
 });
 
