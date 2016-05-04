@@ -1,7 +1,17 @@
+- pageData = JSON.stringify(model) || "{}";
+
 doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+    link(rel='stylesheet', href='/css/style.css')
   body
-    block content
+    div.container(ng-app="class-manager")
+      block content
+
+  script(type='text/javascript', src="https://code.angularjs.org/1.5.5/angular.min.js")
+  script(type='text/javascript', src="js/plugins.js")
+  script(type='text/javascript', src="js/client.js")
+  script(type='text/javascript').
+    window.pageData = !{ pageData };

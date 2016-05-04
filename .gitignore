@@ -1,12 +1,6 @@
 # VSCODE stuff
 .vscode/launch.json
 
-# VS / NTVS stuff
-*.dat
-*.suo
-bin
-obj
-
 # Logs
 logs
 *.log

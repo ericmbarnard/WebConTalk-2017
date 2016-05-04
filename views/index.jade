@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.row(ng-controller="ReposController")
+    div.col-sm-12
+
+      div.row
+        div.col-sm-12
+          h1 My Repositories
+          hr
+          
+      div.row
+        div.col-sm-12
+          table.table.table-striped.table-bordered
+            thead
+              tr
+                th.text-center Full Name
+                th.text-center Created
+                th.text-center Last Push
+                th.text-center Open Issues
+            tbody
+              tr(ng-repeat="repo in repos")
+                td.text-center
+                  a(href="#", ng-href="{{ repo.url }}", ng-bind="repo.full_name")
+                td.text-center(ng-bind="repo.created_at | date : 'short'")
+                td.text-center(ng-bind="repo.pushed_at | date: 'short'")
+                td.text-center(ng-bind="repo.open_issues_count")
+  

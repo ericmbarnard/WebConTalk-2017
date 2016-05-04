@@ -12,10 +12,18 @@
     "express": "~4.13.1",
     "express-session": "^1.13.0",
     "github4": "^0.5.5",
+    "gulp": "^3.9.1",
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "passport": "^0.3.2",
     "passport-github": "^1.1.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5"
   }
 }
