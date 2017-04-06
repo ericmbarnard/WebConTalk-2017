@@ -1,4 +1,3 @@
-angular.module('class-manager', []);
 
 angular.module('class-manager')
 .controller('ReposController', ["$scope", "page-data", function($scope, pageData){
@@ -14,15 +13,9 @@ angular.module('class-manager')
                open_issues_count: x.open_issues_count
            };
         });
-        
+                
         $scope.repos = repos;
     }   
 
     init()
 }]);
-angular.module("class-manager")
-.factory("page-data", function(){
-    
-    return window.pageData;
-    
-});

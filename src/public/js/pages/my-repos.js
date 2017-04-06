@@ -13,7 +13,7 @@ angular.module('class-manager')
                open_issues_count: x.open_issues_count
            };
         });
-        
+                
         $scope.repos = repos;
     }   
 

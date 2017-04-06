@@ -1,5 +1,8 @@
 extends layout
 
+block scripts
+  script(type='text/javascript', src="js/pages/my-repos.js")
+
 block content
   div.row(ng-controller="ReposController")
     div.col-sm-12
