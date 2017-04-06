@@ -14,6 +14,10 @@ var clientModules = {
         src: ["src/client/pages/my-repos/**/*.js", '!src/client/pages/my-repos/**/*.tests.js'],
         dest: "src/public/js/pages"
     },
+    "repo-details": {
+        src: ["src/client/pages/repo-details/**/*.js", '!src/client/pages/repo-details/**/*.tests.js'],
+        dest: "src/public/js/pages"
+    },
     "shared": {
         src: ['src/client/shared/**/*.js', '!src/client/shared/**/*.min.js', '!src/client/shared/**/*.tests.js'],
         dest: 'src/public/js'

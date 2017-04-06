@@ -1,0 +1,23 @@
+body {
+    background: transparent;
+}
+
+label.error {
+    color: red;
+}
+
+tr.completed td:first-child {
+    text-decoration: line-through;
+}
+
+tr.completed button[data-action='complete']{
+    visibility: hidden;
+}
+
+.alert-holder {
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
